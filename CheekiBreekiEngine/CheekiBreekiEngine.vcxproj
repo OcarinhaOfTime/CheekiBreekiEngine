@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{35D6E863-1B21-4AC7-9633-F3EA945DD109}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -75,6 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(Platform)\$(Configuration)\Temp</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\build</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -102,10 +106,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Middleware/jsoncpp/include;$(ProjectDir)Middleware/box2d/include;$(ProjectDir)Middleware/devil/include;$(ProjectDir)Middleware/fmod/include;$(ProjectDir)src;$(ProjectDir)Middleware/glm;$(ProjectDir)Middleware/assimp/include;$(ProjectDir)Middleware/glew/include;$(ProjectDir)/Middleware/qt/include;$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)Middleware/jsoncpp/lib;$(ProjectDir)Middleware/box2d/lib;$(ProjectDir)Middleware/devil/lib;$(ProjectDir)Middleware/fmod/lib;$(ProjectDir)Middleware/assimp/lib64;$(ProjectDir)Middleware/qt/lib;$(ProjectDir)Middleware/glew/lib/Release/x64;$(LibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jsoncpp.lib;Box2D.lib;ILUT.lib;ILU.lib;DevIL.lib;fmod64_vc.lib;opengl32.lib;glew32.lib;assimp.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5OpenGL.lib;Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,9 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="source\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

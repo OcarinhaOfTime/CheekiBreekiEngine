@@ -30,4 +30,5 @@
 # Visual Studio junk
 *.vs
 *.sdf
+*.opendb
 CheekiBreekiEngine/x64

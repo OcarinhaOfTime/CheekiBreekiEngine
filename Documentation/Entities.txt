@@ -1,0 +1,10 @@
+* The engine will be divided by entities, each one representing a sub-system of the engine. Those are:
+    - Core
+        > here we will have the managers of the engine, wich will define how each entity relate to each other
+    - audio
+        > with the help of fmod, here i will develop a layer to use it
+    - physics
+        > powered by box2D, here i will handle all the physics stuff
+    - graphics
+        > rendering, matrics transformations, opengl, shaders...
+    
