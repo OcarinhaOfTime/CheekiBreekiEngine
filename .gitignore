@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio junk
+*.vs
+*.sdf
+CheekiBreekiEngine/x64
