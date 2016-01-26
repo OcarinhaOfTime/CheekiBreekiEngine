@@ -21,9 +21,12 @@
   <ItemGroup>
     <ClCompile Include="src\Core\MainLoop.cpp" />
     <ClCompile Include="src\Core\Time.cpp" />
+    <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\CheekiBreekiDebug.h" />
+    <ClInclude Include="src\Core\Component.h" />
     <ClInclude Include="src\Core\Entity.h" />
     <ClInclude Include="src\Core\MainLoop.h" />
     <ClInclude Include="src\Core\Time.h" />

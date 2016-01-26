@@ -1,0 +1,11 @@
+- We want to develop a clock system that allows us to:
+    * Reliably get the current time and duration of a frame
+    * Pause and scale gameplay time values independent of the other parts of the program
+    * Reset the time, or even feed the clock our own values
+    * Work with both variable and fixed frame duration* Avoi artifacts caused by consecutive frames with very different durations
+    * Avoid precision problems
+    
+- Separate two concepts: clocks and timers
+
+- Time artifacts
+    * Spikes

@@ -1,7 +1,4 @@
 #include <Core\MainLoop.h>
-#include <iostream>
-
-using namespace std;
 
 namespace CheekiBreekiEngine {
 	int MainLoop::init() {
@@ -9,9 +6,14 @@ namespace CheekiBreekiEngine {
 		_time.start();
 		_time.setStaticInstance(&_time);
 
+		
+
 		while (true) {
-			_time.update();
-			cout << "elapsed time: " << Time::elapsedTime() << endl;
+			//check for user input
+			//run AI
+			//get network packets 
+			//update all objects in the world
+			//render
 		}
 		return 0;
 	}
