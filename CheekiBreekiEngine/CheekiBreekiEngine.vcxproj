@@ -22,6 +22,7 @@
     <ClCompile Include="src\Core\MainLoop.cpp" />
     <ClCompile Include="src\Core\Time.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
+    <ClCompile Include="src\Graphics\RendererContext.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +34,7 @@
     <ClInclude Include="src\Graphics\Material.h" />
     <ClInclude Include="src\Graphics\Mesh.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
+    <ClInclude Include="src\Graphics\RendererContext.h" />
     <ClInclude Include="src\Graphics\Shader.h" />
     <ClInclude Include="src\Graphics\Texture.h" />
     <ClInclude Include="src\Graphics\Transform.h" />

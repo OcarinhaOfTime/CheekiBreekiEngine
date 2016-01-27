@@ -1,15 +1,11 @@
 #pragma once
 #include <GL\glew.h>
-#include <QtOpenGL\qgl.h>
 
 
 namespace CheekiBreekiEngine {
-	class Renderer : public QGLWidget {
-	protected:
-		void initializeGL();
-		void paintGL();
+	class Renderer {
 	public:
-		void start();
+		void start();	// must creates it's context, 
 		void update();
 		void terminate();
 		// start

@@ -8,6 +8,7 @@ using std::thread;
 namespace CheekiBreekiEngine {
 	class MainLoop {
 		static const int maxEntities = 1;
+
 		Time _time;
 		enum Entities {
 			GRAPHICS,
@@ -18,6 +19,7 @@ namespace CheekiBreekiEngine {
 		Entity* entities[maxEntities];
 
 	public:
+		static bool running;
 		int init();
 	};
 }

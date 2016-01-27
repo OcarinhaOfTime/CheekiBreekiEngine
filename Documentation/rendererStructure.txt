@@ -1,0 +1,4 @@
+- How data will be stored and shared?
+	* The renderer will have a collection of models
+	* on each drawCall, the renderer will use the info about those models to draw on screen
+	* the model will be created on the renderer thread
