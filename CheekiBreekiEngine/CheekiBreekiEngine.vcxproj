@@ -19,25 +19,50 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\IOUtils.cpp" />
     <ClCompile Include="src\Core\MainLoop.cpp" />
     <ClCompile Include="src\Core\Time.cpp" />
+    <ClCompile Include="src\Graphics\Material.cpp" />
+    <ClCompile Include="src\Graphics\Mesh.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\Graphics\RendererContext.cpp" />
+    <ClCompile Include="src\Graphics\Shader.cpp" />
+    <ClCompile Include="src\Graphics\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CheekiBreekiDebug.h" />
     <ClInclude Include="src\Core\Component.h" />
     <ClInclude Include="src\Core\Entity.h" />
+    <ClInclude Include="src\Core\IOUtils.h" />
     <ClInclude Include="src\Core\MainLoop.h" />
     <ClInclude Include="src\Core\Time.h" />
     <ClInclude Include="src\Graphics\Material.h" />
     <ClInclude Include="src\Graphics\Mesh.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\RendererContext.h" />
+    <ClInclude Include="src\Graphics\Sampler2D.h" />
     <ClInclude Include="src\Graphics\Shader.h" />
     <ClInclude Include="src\Graphics\Texture.h" />
     <ClInclude Include="src\Graphics\Transform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\cellShading_Fragment.glsl" />
+    <None Include="Assets\Shaders\cellShading_Vertex.glsl" />
+    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Fragment.glsl" />
+    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Vertex.glsl" />
+    <None Include="Assets\Shaders\edge_Fragment.glsl" />
+    <None Include="Assets\Shaders\edge_Vertex.glsl" />
+    <None Include="Assets\Shaders\mixTexture_Fragment.glsl" />
+    <None Include="Assets\Shaders\mixTexture_Vertex.glsl" />
+    <None Include="Assets\Shaders\opaque_Fragment.glsl" />
+    <None Include="Assets\Shaders\opaque_Vertex.glsl" />
+    <None Include="Assets\Shaders\passThrough_Fragment.glsl" />
+    <None Include="Assets\Shaders\passThrough_Vertex.glsl" />
+    <None Include="Assets\Shaders\phong_Fragment.glsl" />
+    <None Include="Assets\Shaders\phong_Vertex.glsl" />
+    <None Include="Assets\Shaders\watercolor_Fragment.glsl" />
+    <None Include="Assets\Shaders\watercolor_Vertex.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{35D6E863-1B21-4AC7-9633-F3EA945DD109}</ProjectGuid>
@@ -95,8 +120,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(Platform)\$(Configuration)\Temp</IntDir>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\build</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\Temp\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\build\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

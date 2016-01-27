@@ -2,8 +2,9 @@
 #include <Core\MainLoop.h>
 
 using namespace CheekiBreekiEngine;
-int main(char** argv, int argc) {
-	std::cout << "Hello Worlod" << std::endl;
+int main(int argc, char* argv[]) {
 	MainLoop mainLoop;
-	return mainLoop.init();
+	mainLoop.init(argc, argv);
+
+	return 0;
 }

@@ -6,11 +6,18 @@
 namespace CheekiBreekiEngine {
 	bool MainLoop::running = true;
 
-	int MainLoop::init() {
+	int MainLoop::init(int argc, char* argv[]) {
 		//entities initialization
 		_time.start();
-		_time.setStaticInstance(&_time);	
+		_time.setStaticInstance(&_time);
+		Renderer renderer;
+		
 
+		thread rendererThread([&] {
+			renderer.init(argc, argv);
+		});
+
+		rendererThread.join();
 		//while (running) {
 			//check for user input
 			//run AI
@@ -19,9 +26,9 @@ namespace CheekiBreekiEngine {
 			//render
 		//}
 		//terminate all entitie
+
+
 		cout << "MainLoop::init()" << endl;
-		Renderer renderer;
-		renderer.start();
 		return 0;
 	}
 }

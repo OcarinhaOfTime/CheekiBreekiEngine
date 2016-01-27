@@ -20,6 +20,6 @@ namespace CheekiBreekiEngine {
 
 	public:
 		static bool running;
-		int init();
+		int init(int argc, char* argv[]);
 	};
 }

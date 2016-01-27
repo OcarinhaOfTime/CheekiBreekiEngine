@@ -1,10 +1,9 @@
 #pragma once
-#include <GL\glew.h>
-
 
 namespace CheekiBreekiEngine {
 	class Renderer {
 	public:
+		int init(int argc, char* argv[]);
 		void start();	// must creates it's context, 
 		void update();
 		void terminate();

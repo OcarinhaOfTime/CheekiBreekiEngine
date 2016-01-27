@@ -30,6 +30,21 @@
     <ClCompile Include="src\Graphics\RendererContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Graphics\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\IOUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Graphics\Mesh.h">
@@ -68,5 +83,29 @@
     <ClInclude Include="src\Graphics\RendererContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\IOUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Sampler2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\cellShading_Fragment.glsl" />
+    <None Include="Assets\Shaders\cellShading_Vertex.glsl" />
+    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Fragment.glsl" />
+    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Vertex.glsl" />
+    <None Include="Assets\Shaders\edge_Fragment.glsl" />
+    <None Include="Assets\Shaders\edge_Vertex.glsl" />
+    <None Include="Assets\Shaders\mixTexture_Fragment.glsl" />
+    <None Include="Assets\Shaders\mixTexture_Vertex.glsl" />
+    <None Include="Assets\Shaders\opaque_Fragment.glsl" />
+    <None Include="Assets\Shaders\opaque_Vertex.glsl" />
+    <None Include="Assets\Shaders\passThrough_Fragment.glsl" />
+    <None Include="Assets\Shaders\passThrough_Vertex.glsl" />
+    <None Include="Assets\Shaders\phong_Fragment.glsl" />
+    <None Include="Assets\Shaders\phong_Vertex.glsl" />
+    <None Include="Assets\Shaders\watercolor_Fragment.glsl" />
+    <None Include="Assets\Shaders\watercolor_Vertex.glsl" />
   </ItemGroup>
 </Project>
