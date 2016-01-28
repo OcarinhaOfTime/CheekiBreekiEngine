@@ -35,7 +35,7 @@ namespace CheekiBreekiEngine {
 		mvpID = glGetUniformLocation(programID, "MVP");
 	}
 
-	void Material::setMatrixUniform(const char* uniformName, glm::mat4 & mtx) {
+	/*void Material::setMatrixUniform(const char* uniformName, glm::mat4 & mtx) {
 		GLuint uniformID = glGetUniformLocation(programID, uniformName);
 		glUniformMatrix4fv(uniformID, 1, GL_FALSE, &mtx[0][0]);
 	}
@@ -47,7 +47,7 @@ namespace CheekiBreekiEngine {
 	void Material::setVec3Uniform(const char * uniformName, glm::vec3 & vec) {
 		GLuint uniformID = glGetUniformLocation(programID, uniformName);
 		glUniform3fv(uniformID, 1, &vec[0]);
-	}
+	}*/
 
 	void Material::bindSampler(Sampler2D* sampler) {
 		glActiveTexture(sampler->activeTexture);
@@ -75,7 +75,7 @@ namespace CheekiBreekiEngine {
 		samplers.push_back(sampler);
 	}
 
-	void Material::addFloatUniform(const char * uniformName, float f) {
+	/*void Material::addFloatUniform(const char * uniformName, float f) {
 		unsigned int location = glGetUniformLocation(programID, uniformName);
 		floatUniforms.insert(pair<unsigned int, float>(location, f));
 	}
@@ -88,9 +88,9 @@ namespace CheekiBreekiEngine {
 	void Material::addVec4Uniform(const char * uniformName, glm::vec4 & vec) {
 		unsigned int location = glGetUniformLocation(programID, uniformName);
 		vec4Uniforms.insert(pair<unsigned int, glm::vec4>(location, vec));
-	}
+	}*/
 
-	void Material::bindUniforms() {
+	/*void Material::bindUniforms() {
 		for (auto sampler : samplers)
 			bindSampler(sampler);
 
@@ -100,7 +100,7 @@ namespace CheekiBreekiEngine {
 			glUniform4fv(vec.first, 1, &vec.second[0]);
 		for (auto f : floatUniforms)
 			glUniform1f(f.first, f.second);
-	}
+	}*/
 
 	void Material::bind() {
 		glUseProgram(programID);
