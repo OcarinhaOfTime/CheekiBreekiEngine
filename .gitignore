@@ -23,4 +23,6 @@
 *.opendb
 CheekiBreekiEngine/x64
 
+#re-include libs and dlls
 !*.lib
+!*.dll
