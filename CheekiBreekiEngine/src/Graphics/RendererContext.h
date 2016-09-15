@@ -1,7 +1,6 @@
 #pragma once
-#include <QtOpenGL\qgl.h>
 namespace CheekiBreekiEngine {
-	class RendererContext : public QGLWidget {
+	class RendererContext{
 	protected:
 		void initializeGL();
 		void paintGL();

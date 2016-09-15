@@ -46,7 +46,7 @@ namespace CheekiBreekiEngine {
 	}
 
 	void RendererContext::paintGL() {
-		glViewport(0, 0, width(), height());
+		glViewport(0, 0, 1024, 768);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//update graphics here

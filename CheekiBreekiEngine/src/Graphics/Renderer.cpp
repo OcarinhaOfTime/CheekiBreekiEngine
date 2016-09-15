@@ -1,21 +1,21 @@
 #include <Graphics\Renderer.h>
-#include <QtWidgets\qapplication.h>
 #include <Graphics\RendererContext.h>
 #include <CheekiBreekiDebug.h>
+#include <Graphics\SDLTest.h>
 
 namespace CheekiBreekiEngine {
 	//Initialise openGL and other graphics libs
 	int Renderer::init(int argc, char * argv[]) {
 		cout << "Renderer::init()" << endl;
-		QApplication app(argc, argv);
 
-		RendererContext rendererContext;
-		rendererContext.show();
+		//RendererContext rendererContext;
+		SDLTest t;
+		t.Test();
 
-		return app.exec();
+		return 0;
 	}
 	void Renderer::start() {
-		//rendererContext.show();		
+		//rendererContext.show();
 	}
 
 	void Renderer::update() {

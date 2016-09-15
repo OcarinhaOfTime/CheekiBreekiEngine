@@ -8,17 +8,8 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-
 # Fortran module files
 *.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
 
 # Executables
 *.exe
@@ -26,6 +17,7 @@
 *.app
 
 # Visual Studio junk
+*.db
 *.vs
 *.sdf
 *.opendb
