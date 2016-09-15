@@ -22,3 +22,5 @@
 *.sdf
 *.opendb
 CheekiBreekiEngine/x64
+
+!*.lib
