@@ -1,3 +1,4 @@
+/*
 #include <GL\glew.h>
 #include <Graphics\RendererContext.h>
 #include <CheekiBreekiDebug.h>
@@ -41,8 +42,6 @@ namespace CheekiBreekiEngine {
 
 		shader = new Shader;
 		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Fragment.glsl");
-		
-
 	}
 
 	void RendererContext::paintGL() {
@@ -55,3 +54,4 @@ namespace CheekiBreekiEngine {
 		mesh->render();
 	}
 }
+*/

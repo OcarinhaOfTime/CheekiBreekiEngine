@@ -15,6 +15,13 @@ namespace CheekiBreekiEngine {
 
 		thread rendererThread([&] {
 			renderer.init(argc, argv);
+			renderer.start();
+
+			while (running) {
+				renderer.update();
+			}
+
+			renderer.terminate();
 		});
 
 		rendererThread.join();
@@ -26,9 +33,6 @@ namespace CheekiBreekiEngine {
 			//render
 		//}
 		//terminate all entitie
-
-
-		cout << "MainLoop::init()" << endl;
 		return 0;
 	}
 }
