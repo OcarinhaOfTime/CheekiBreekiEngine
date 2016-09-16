@@ -1,10 +1,5 @@
 #include <GL\glew.h>
 
-#include <Graphics\Renderer.h>
-#include <CheekiBreekiDebug.h>
-#include <Graphics\GLFWRendererContext.h>
-
-#include <Graphics\RendererContext.h>
 #include <CheekiBreekiDebug.h>
 #include <cassert>
 
@@ -14,6 +9,12 @@
 
 #include <CheekiBreekiDebug.h>
 #include <Core\MainLoop.h>
+
+#include <Graphics\Renderer.h>
+#include <CheekiBreekiDebug.h>
+#include <Graphics\RendererContext.h>
+#include <Graphics\GLFWRendererContext.h>
+#include <Graphics\SDLRendererContext.h>
 
 #include <Graphics\Mesh.h>
 #include <Graphics\Shader.h>
@@ -54,8 +55,8 @@ namespace CheekiBreekiEngine {
 		mesh = new Mesh;
 		mesh->loadFromFile("Assets/Meshes/suzanne.obj");
 
-		shader = new Shader;
-		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Vertex.glsl");
+		//shader = new Shader;
+		//shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Vertex.glsl");
 		
 	}
 
@@ -66,8 +67,8 @@ namespace CheekiBreekiEngine {
 
 		//update graphics here
 		cout << "updating graphics..." << endl;
-		mesh->render();
-		shader->bind();
+		//mesh->render();
+		//shader->bind();
 		rendererContext->paint();
 	}
 
