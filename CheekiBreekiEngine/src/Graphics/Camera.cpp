@@ -18,5 +18,5 @@ glm::mat4 CheekiBreekiEngine::Camera::viewMtx() {
 }
 
 glm::mat4 CheekiBreekiEngine::Camera::VPMtx() {
-	return viewMtx() * projectionMtx();
+	return projectionMtx() * viewMtx();
 }

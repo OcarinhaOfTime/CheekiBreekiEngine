@@ -19,12 +19,16 @@
 #include <Graphics\Shader.h>
 #include <Graphics\Texture.h>
 #include <Graphics\Material.h>
+#include <Graphics\Transform.h>
+#include <Graphics\PerspectiveCamera.h>
 
 namespace CheekiBreekiEngine {
 	Mesh* mesh;
 	Shader* shader;
 	Material* material;
 	Texture* texture;
+	Camera* cam;
+	Transform* transform;
 
 	//Initialise openGL and other graphics libs
 	int Renderer::init(int argc, char * argv[]) {
@@ -55,19 +59,26 @@ namespace CheekiBreekiEngine {
 		mesh->loadFromFile("Assets/Meshes/suzanne.obj");
 
 		shader = new Shader;
-		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Vertex.glsl");
+		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Fragment.glsl");
+
+		material = new Material();
+		material->initialise(shader);
 		
+		cam = new PerspectiveCamera(45);
+		cam->setPosition(glm::vec3(0,0,-5));
+		transform = new Transform;
 	}
 
 	void Renderer::update() {
 
-		glViewport(0, 0, 1024, 768);
+		//glViewport(0, 0, 1024, 768);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//update graphics here
-		cout << "updating graphics..." << endl;
+		material->bind();
+		material->setMVP(cam->VPMtx() * transform->modelMtx());
 		mesh->render();
-		shader->bind();
+
 		rendererContext->paint();
 	}
 

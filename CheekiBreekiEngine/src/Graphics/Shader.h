@@ -8,8 +8,8 @@ namespace CheekiBreekiEngine {
 		friend class Material;
 		unsigned int vertexShaderID;
 		unsigned int fragmentShaderID;
-		unsigned int programID;
 	public:
+		unsigned int programID;
 		void loadFromFile(const char* vertexShaderPath, const char* fragmentShaderPath);
 		void loadFromFile(string vertexShaderPath, string fragmentShaderPath);
 		~Shader();

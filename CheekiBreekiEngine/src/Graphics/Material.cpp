@@ -90,6 +90,11 @@ namespace CheekiBreekiEngine {
 		vec4Uniforms.insert(pair<unsigned int, glm::vec4>(location, vec));
 	}
 
+	void Material::addMat4Uniform(const char * uniformName, glm::mat4 & mat) {
+		unsigned int location = glGetUniformLocation(programID, uniformName);
+		mat4Uniforms.insert(pair<unsigned int, glm::mat4>(location, mat));
+	}
+
 	void Material::bindUniforms() {
 		for (auto sampler : samplers)
 			bindSampler(sampler);
@@ -100,6 +105,8 @@ namespace CheekiBreekiEngine {
 			glUniform4fv(vec.first, 1, &vec.second[0]);
 		for (auto f : floatUniforms)
 			glUniform1f(f.first, f.second);
+		for (auto m : mat4Uniforms)
+			glUniformMatrix4fv(m.first, 1, GL_FALSE, &m.second[0][0]);
 	}
 
 	void Material::bind() {

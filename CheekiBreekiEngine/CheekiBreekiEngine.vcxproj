@@ -27,6 +27,7 @@
     <ClCompile Include="src\Graphics\GLFWTest.cpp" />
     <ClCompile Include="src\Graphics\Material.cpp" />
     <ClCompile Include="src\Graphics\Mesh.cpp" />
+    <ClCompile Include="src\Graphics\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\Graphics\Transform.cpp" />
     <ClCompile Include="src\Graphics\_RendererContext.cpp" />
@@ -47,17 +48,13 @@
     <ClInclude Include="src\Graphics\GLFWTest.h" />
     <ClInclude Include="src\Graphics\Material.h" />
     <ClInclude Include="src\Graphics\Mesh.h" />
+    <ClInclude Include="src\Graphics\PerspectiveCamera.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\RendererContext.h" />
     <ClInclude Include="src\Graphics\Sampler2D.h" />
     <ClInclude Include="src\Graphics\Shader.h" />
     <ClInclude Include="src\Graphics\Texture.h" />
     <ClInclude Include="src\Graphics\Transform.h" />
-    <ClInclude Include="src\Mathc\Mat3.h" />
-    <ClInclude Include="src\Mathc\Mat4.h" />
-    <ClInclude Include="src\Mathc\Quaternion.h" />
-    <ClInclude Include="src\Mathc\Vector2.h" />
-    <ClInclude Include="src\Mathc\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\cellShading_Fragment.glsl" />
