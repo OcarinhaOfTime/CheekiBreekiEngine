@@ -8,7 +8,7 @@ namespace CheekiBreekiEngine {
 			return;
 
 		/* Create a windowed mode window and its OpenGL context */
-		window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+		window = glfwCreateWindow(this->height, this->height, this->windowName, NULL, NULL);
 		if (!window) {
 			glfwTerminate();
 		}
@@ -34,5 +34,12 @@ namespace CheekiBreekiEngine {
 	}
 	void GLFWRendererContext::terminate() {
 		glfwTerminate();
+	}
+	GLFWRendererContext::GLFWRendererContext() {
+	}
+	GLFWRendererContext::GLFWRendererContext(char * windowName, int width, int height) {
+		this->windowName = windowName;
+		this->width = width;
+		this->height = height;
 	}
 }

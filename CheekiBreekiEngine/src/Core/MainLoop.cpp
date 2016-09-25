@@ -2,14 +2,22 @@
 #include <Graphics\Renderer.h>
 
 #include <CheekiBreekiDebug.h>
+#include <functional>
+#include <queue>
+#include <vector>
+#include <iostream>
+
+using namespace std;
 
 namespace CheekiBreekiEngine {
 	bool MainLoop::running = true;
 
+	template <typename T>
+	bool foo(T x, T y) {
+		return x < y;
+	}
+
 	int MainLoop::init(int argc, char* argv[]) {
-		//entities initialization
-		_time.start();
-		_time.setStaticInstance(&_time);
 		Renderer renderer;
 		
 
@@ -25,6 +33,7 @@ namespace CheekiBreekiEngine {
 		});
 
 		rendererThread.join();
+
 		//while (running) {
 			//check for user input
 			//run AI

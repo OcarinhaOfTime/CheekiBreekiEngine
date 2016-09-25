@@ -42,9 +42,6 @@
     <ClCompile Include="src\Graphics\Material.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Graphics\SDLTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Graphics\GLFWTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,7 +51,7 @@
     <ClCompile Include="src\Graphics\_RendererContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Graphics\SDLRendererContext.cpp">
+    <ClCompile Include="src\Graphics\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,16 +116,13 @@
     <ClInclude Include="src\Mathc\Mat3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Graphics\SDLTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Graphics\GLFWTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Graphics\GLFWRendererContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Graphics\SDLRendererContext.h">
+    <ClInclude Include="src\Graphics\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

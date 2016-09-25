@@ -14,7 +14,6 @@
 #include <CheekiBreekiDebug.h>
 #include <Graphics\RendererContext.h>
 #include <Graphics\GLFWRendererContext.h>
-#include <Graphics\SDLRendererContext.h>
 
 #include <Graphics\Mesh.h>
 #include <Graphics\Shader.h>
@@ -30,7 +29,7 @@ namespace CheekiBreekiEngine {
 	//Initialise openGL and other graphics libs
 	int Renderer::init(int argc, char * argv[]) {
 		cout << "initializeGL()" << endl;
-		rendererContext = new GLFWRendererContext;
+		rendererContext = new GLFWRendererContext("HUE", 1024, 768);
 		rendererContext->initialize();
 
 		GLenum errorCode = glewInit();
@@ -55,8 +54,8 @@ namespace CheekiBreekiEngine {
 		mesh = new Mesh;
 		mesh->loadFromFile("Assets/Meshes/suzanne.obj");
 
-		//shader = new Shader;
-		//shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Vertex.glsl");
+		shader = new Shader;
+		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Vertex.glsl");
 		
 	}
 
@@ -67,8 +66,8 @@ namespace CheekiBreekiEngine {
 
 		//update graphics here
 		cout << "updating graphics..." << endl;
-		//mesh->render();
-		//shader->bind();
+		mesh->render();
+		shader->bind();
 		rendererContext->paint();
 	}
 

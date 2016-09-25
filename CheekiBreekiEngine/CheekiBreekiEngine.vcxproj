@@ -22,14 +22,13 @@
     <ClCompile Include="src\Core\IOUtils.cpp" />
     <ClCompile Include="src\Core\MainLoop.cpp" />
     <ClCompile Include="src\Core\Time.cpp" />
+    <ClCompile Include="src\Graphics\Camera.cpp" />
     <ClCompile Include="src\Graphics\GLFWRendererContext.cpp" />
     <ClCompile Include="src\Graphics\GLFWTest.cpp" />
     <ClCompile Include="src\Graphics\Material.cpp" />
     <ClCompile Include="src\Graphics\Mesh.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
-    <ClCompile Include="src\Graphics\SDLRendererContext.cpp" />
     <ClCompile Include="src\Graphics\_RendererContext.cpp" />
-    <ClCompile Include="src\Graphics\SDLTest.cpp" />
     <ClCompile Include="src\Graphics\Shader.cpp" />
     <ClCompile Include="src\Graphics\Texture.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -42,6 +41,7 @@
     <ClInclude Include="src\Core\MainLoop.h" />
     <ClInclude Include="src\Core\Time.h" />
     <ClInclude Include="src\Core\Transform.h" />
+    <ClInclude Include="src\Graphics\Camera.h" />
     <ClInclude Include="src\Graphics\GLFWRendererContext.h" />
     <ClInclude Include="src\Graphics\GLFWTest.h" />
     <ClInclude Include="src\Graphics\Material.h" />
@@ -49,8 +49,6 @@
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\RendererContext.h" />
     <ClInclude Include="src\Graphics\Sampler2D.h" />
-    <ClInclude Include="src\Graphics\SDLRendererContext.h" />
-    <ClInclude Include="src\Graphics\SDLTest.h" />
     <ClInclude Include="src\Graphics\Shader.h" />
     <ClInclude Include="src\Graphics\Texture.h" />
     <ClInclude Include="src\Graphics\Transform.h" />
@@ -163,13 +161,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)Middleware/glfw/include;$(ProjectDir)Middleware/sdl2/include;$(ProjectDir)Middleware/jsoncpp/include;$(ProjectDir)Middleware/box2d/include;$(ProjectDir)Middleware/devil/include;$(ProjectDir)Middleware/fmod/include;$(ProjectDir)src;$(ProjectDir)Middleware/glm;$(ProjectDir)Middleware/assimp/include;$(ProjectDir)Middleware/glew/include;$(IncludePath)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Middleware/glfw/include;$(ProjectDir)Middleware/jsoncpp/include;$(ProjectDir)Middleware/box2d/include;$(ProjectDir)Middleware/devil/include;$(ProjectDir)Middleware/fmod/include;$(ProjectDir)src;$(ProjectDir)Middleware/glm;$(ProjectDir)Middleware/assimp/include;$(ProjectDir)Middleware/glew/include;$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)Middleware/glfw/lib/;$(ProjectDir)Middleware/sdl2/lib;$(ProjectDir)Middleware/jsoncpp/lib;$(ProjectDir)Middleware/box2d/lib;$(ProjectDir)Middleware/devil/lib;$(ProjectDir)Middleware/fmod/lib;$(ProjectDir)Middleware/assimp/lib64;$(ProjectDir)Middleware/glew/lib/Release/x64;$(LibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3dll.lib;glfw3.lib;SDL2.lib;SDL2main.lib;jsoncpp.lib;Box2D.lib;ILUT.lib;ILU.lib;DevIL.lib;fmod64_vc.lib;opengl32.lib;glew32.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Middleware/glfw/lib/;$(ProjectDir)Middleware/jsoncpp/lib;$(ProjectDir)Middleware/box2d/lib;$(ProjectDir)Middleware/devil/lib;$(ProjectDir)Middleware/fmod/lib;$(ProjectDir)Middleware/assimp/lib64;$(ProjectDir)Middleware/glew/lib/Release/x64;$(LibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3dll.lib;glfw3.lib;jsoncpp.lib;Box2D.lib;ILUT.lib;ILU.lib;DevIL.lib;fmod64_vc.lib;opengl32.lib;glew32.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

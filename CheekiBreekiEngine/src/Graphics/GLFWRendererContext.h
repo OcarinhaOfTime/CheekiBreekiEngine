@@ -4,11 +4,16 @@
 namespace CheekiBreekiEngine {
 	class GLFWRendererContext : public RendererContext {
 		GLFWwindow* window;
-		// Inherited via RendererContext
+		char* windowName = "";
+		int width = 1024;
+		int height = 768;
+
 		virtual void initialize() override;
 		virtual void paint() override;
-
-		// Inherited via RendererContext
 		virtual void terminate() override;
+
+	public:
+		GLFWRendererContext();
+		GLFWRendererContext(char* windowName, int width, int height);
 	};
 }
