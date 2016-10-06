@@ -81,6 +81,10 @@ namespace CheekiBreekiEngine {
 		loadFromFile(vertexShaderPath.c_str(), fragmentShaderPath.c_str());
 	}
 
+	void Shader::loadFromFile(string shaderPath) {
+		loadFromFile(shaderPath + "_Vertex.glsl", shaderPath + "_Fragment.glsl");
+	}
+
 	Shader::~Shader() {
 		glDeleteShader(vertexShaderID);
 		glDeleteShader(fragmentShaderID);

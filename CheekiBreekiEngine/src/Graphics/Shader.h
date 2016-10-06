@@ -12,6 +12,7 @@ namespace CheekiBreekiEngine {
 		unsigned int programID;
 		void loadFromFile(const char* vertexShaderPath, const char* fragmentShaderPath);
 		void loadFromFile(string vertexShaderPath, string fragmentShaderPath);
+		void loadFromFile(string shaderPath);
 		~Shader();
 
 		void bind();

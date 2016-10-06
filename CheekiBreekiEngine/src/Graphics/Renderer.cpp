@@ -15,21 +15,7 @@
 #include <Graphics\RendererContext.h>
 #include <Graphics\GLFWRendererContext.h>
 
-#include <Graphics\Mesh.h>
-#include <Graphics\Shader.h>
-#include <Graphics\Texture.h>
-#include <Graphics\Material.h>
-#include <Graphics\Transform.h>
-#include <Graphics\PerspectiveCamera.h>
-
 namespace CheekiBreekiEngine {
-	Mesh* mesh;
-	Shader* shader;
-	Material* material;
-	Texture* texture;
-	Camera* cam;
-	Transform* transform;
-
 	//Initialise openGL and other graphics libs
 	int Renderer::init(int argc, char * argv[]) {
 		cout << "initializeGL()" << endl;
@@ -55,36 +41,32 @@ namespace CheekiBreekiEngine {
 		return 0;
 	}
 	void Renderer::start() {
-		mesh = new Mesh;
-		mesh->loadFromFile("Assets/Meshes/suzanne.obj");
-
-		shader = new Shader;
-		shader->loadFromFile("Assets/Shaders/passThrough_Vertex.glsl", "Assets/Shaders/passThrough_Fragment.glsl");
-
-		material = new Material();
-		material->initialise(shader);
-		
-		cam = new PerspectiveCamera(45);
-		cam->setPosition(glm::vec3(0,0,-5));
-		transform = new Transform;
+		for (auto renderable : renderables)
+			renderable->start();
 	}
 
 	void Renderer::update() {
-
 		//glViewport(0, 0, 1024, 768);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		//update graphics here
-		material->bind();
-		material->setMVP(cam->VPMtx() * transform->modelMtx());
-		mesh->render();
+		for (auto renderable : renderables)
+			renderable->update();
 
 		rendererContext->paint();
 	}
 
 	void Renderer::terminate() {
+		for (auto renderable : renderables)
+			renderable->terminate();
+
 		rendererContext->terminate();
 	}
 
+	void Renderer::addRenderable(Renderable * renderable) {
+		this->renderables.insert(this->renderables.end(), renderable);
+	}
 
+	void Renderer::removeRenderable(Renderable *renderable) {
+		this->renderables.remove(renderable);
+	}
 }

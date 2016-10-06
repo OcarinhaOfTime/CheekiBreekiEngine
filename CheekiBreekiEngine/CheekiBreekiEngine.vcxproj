@@ -21,12 +21,13 @@
   <ItemGroup>
     <ClCompile Include="src\Core\IOUtils.cpp" />
     <ClCompile Include="src\Core\MainLoop.cpp" />
+    <ClCompile Include="src\Core\RenderableTest.cpp" />
     <ClCompile Include="src\Core\Time.cpp" />
     <ClCompile Include="src\Graphics\Camera.cpp" />
     <ClCompile Include="src\Graphics\GLFWRendererContext.cpp" />
-    <ClCompile Include="src\Graphics\GLFWTest.cpp" />
     <ClCompile Include="src\Graphics\Material.cpp" />
     <ClCompile Include="src\Graphics\Mesh.cpp" />
+    <ClCompile Include="src\Graphics\OrthographicCamera.cpp" />
     <ClCompile Include="src\Graphics\PerspectiveCamera.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
     <ClCompile Include="src\Graphics\Transform.cpp" />
@@ -41,14 +42,16 @@
     <ClInclude Include="src\Core\Entity.h" />
     <ClInclude Include="src\Core\IOUtils.h" />
     <ClInclude Include="src\Core\MainLoop.h" />
+    <ClInclude Include="src\Core\RenderableTest.h" />
     <ClInclude Include="src\Core\Time.h" />
     <ClInclude Include="src\Core\Transform.h" />
     <ClInclude Include="src\Graphics\Camera.h" />
     <ClInclude Include="src\Graphics\GLFWRendererContext.h" />
-    <ClInclude Include="src\Graphics\GLFWTest.h" />
     <ClInclude Include="src\Graphics\Material.h" />
     <ClInclude Include="src\Graphics\Mesh.h" />
+    <ClInclude Include="src\Graphics\OrthographicCamera.h" />
     <ClInclude Include="src\Graphics\PerspectiveCamera.h" />
+    <ClInclude Include="src\Graphics\Renderable.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
     <ClInclude Include="src\Graphics\RendererContext.h" />
     <ClInclude Include="src\Graphics\Sampler2D.h" />
