@@ -5,7 +5,7 @@
 #include <Graphics\Texture.h>
 #include <Graphics\Material.h>
 #include <Graphics\Transform.h>
-#include <Graphics\PerspectiveCamera.h>
+#include <Graphics\Camera.h>
 
 namespace CheekiBreekiEngine {
 	class RenderableTest : public Renderable{		

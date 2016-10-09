@@ -1,16 +1,11 @@
-#include "Camera.h"
+#include <Graphics\Camera.h>
 #include <glm\gtx\transform.hpp>
-
-void CheekiBreekiEngine::Camera::setPosition(glm::vec3 position) {
-	this->position = position;
+void CheekiBreekiEngine::Camera::move(float x, float y, float z) {
+	this->position += this->right * x + this->up * y + this->look * z;
 }
 
-void CheekiBreekiEngine::Camera::setLook(glm::vec3 look) {
-	this->look = look;
-}
-
-void CheekiBreekiEngine::Camera::setUp(glm::vec3 up) {
-	this->up = up;
+void CheekiBreekiEngine::Camera::lookAt(float x, float y, float z) {
+	this->position = glm::vec3(x, y, z);
 }
 
 glm::mat4 CheekiBreekiEngine::Camera::viewMtx() {

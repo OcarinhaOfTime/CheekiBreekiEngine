@@ -18,67 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Core\IOUtils.cpp" />
-    <ClCompile Include="src\Core\MainLoop.cpp" />
-    <ClCompile Include="src\Core\RenderableTest.cpp" />
-    <ClCompile Include="src\Core\Time.cpp" />
-    <ClCompile Include="src\Graphics\Camera.cpp" />
-    <ClCompile Include="src\Graphics\GLFWRendererContext.cpp" />
-    <ClCompile Include="src\Graphics\Material.cpp" />
-    <ClCompile Include="src\Graphics\Mesh.cpp" />
-    <ClCompile Include="src\Graphics\OrthographicCamera.cpp" />
-    <ClCompile Include="src\Graphics\PerspectiveCamera.cpp" />
-    <ClCompile Include="src\Graphics\Renderer.cpp" />
-    <ClCompile Include="src\Graphics\Transform.cpp" />
-    <ClCompile Include="src\Graphics\Shader.cpp" />
-    <ClCompile Include="src\Graphics\Texture.cpp" />
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Shaders\cellShading_Fragment.glsl" />
-    <None Include="Assets\Shaders\cellShading_Vertex.glsl" />
-    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Fragment.glsl" />
-    <None Include="Assets\Shaders\cheekiBreekiWatercolor_Vertex.glsl" />
-    <None Include="Assets\Shaders\edge_Fragment.glsl" />
-    <None Include="Assets\Shaders\edge_Vertex.glsl" />
-    <None Include="Assets\Shaders\mixTexture_Fragment.glsl" />
-    <None Include="Assets\Shaders\mixTexture_Vertex.glsl" />
-    <None Include="Assets\Shaders\opaque_Fragment.glsl" />
-    <None Include="Assets\Shaders\opaque_Vertex.glsl" />
-    <None Include="Assets\Shaders\passThrough_Fragment.glsl" />
-    <None Include="Assets\Shaders\passThrough_Vertex.glsl" />
-    <None Include="Assets\Shaders\phong_Fragment.glsl" />
-    <None Include="Assets\Shaders\phong_Vertex.glsl" />
-    <None Include="Assets\Shaders\watercolor_Fragment.glsl" />
-    <None Include="Assets\Shaders\watercolor_Vertex.glsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\CheekiBreekiDebug.h" />
-    <ClInclude Include="include\Core\Component.h" />
-    <ClInclude Include="include\Core\Entity.h" />
-    <ClInclude Include="include\Core\IOUtils.h" />
-    <ClInclude Include="include\Core\MainLoop.h" />
-    <ClInclude Include="include\Core\RenderableTest.h" />
-    <ClInclude Include="include\Core\Time.h" />
-    <ClInclude Include="include\Graphics\Camera.h" />
-    <ClInclude Include="include\Graphics\GLFWRendererContext.h" />
-    <ClInclude Include="include\Graphics\Material.h" />
-    <ClInclude Include="include\Graphics\Mesh.h" />
-    <ClInclude Include="include\Graphics\OrthographicCamera.h" />
-    <ClInclude Include="include\Graphics\PerspectiveCamera.h" />
-    <ClInclude Include="include\Graphics\Renderable.h" />
-    <ClInclude Include="include\Graphics\Renderer.h" />
-    <ClInclude Include="include\Graphics\RendererContext.h" />
-    <ClInclude Include="include\Graphics\Sampler2D.h" />
-    <ClInclude Include="include\Graphics\Shader.h" />
-    <ClInclude Include="include\Graphics\Texture.h" />
-    <ClInclude Include="include\Graphics\Transform.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{35D6E863-1B21-4AC7-9633-F3EA945DD109}</ProjectGuid>
+    <ProjectGuid>{816D0EBF-7530-4A3C-B863-3CD13AF5E33E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CheekiBreekiEngine</RootNamespace>
+    <RootNamespace>CheekiBreekiEngineTester</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -131,8 +74,6 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(Platform)\$(Configuration)\Temp\</IntDir>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\build\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -160,13 +101,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)Middleware/glfw/include;$(ProjectDir)Middleware/jsoncpp/include;$(ProjectDir)Middleware/box2d/include;$(ProjectDir)Middleware/devil/include;$(ProjectDir)Middleware/fmod/include;$(ProjectDir)include;$(ProjectDir)Middleware/glm;$(ProjectDir)Middleware/assimp/include;$(ProjectDir)Middleware/glew/include;$(IncludePath)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)../CheekiBreekiEngine/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)Middleware/glfw/lib/;$(ProjectDir)Middleware/jsoncpp/lib;$(ProjectDir)Middleware/box2d/lib;$(ProjectDir)Middleware/devil/lib;$(ProjectDir)Middleware/fmod/lib;$(ProjectDir)Middleware/assimp/lib64;$(ProjectDir)Middleware/glew/lib/Release/x64;$(LibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3dll.lib;glfw3.lib;jsoncpp.lib;Box2D.lib;ILUT.lib;ILU.lib;DevIL.lib;fmod64_vc.lib;opengl32.lib;glew32.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CheekiBreekiEngine\x64\Debug\build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CheekiBreekiEngine.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -203,6 +144,14 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheekiBreekiEngine\CheekiBreekiEngine.vcxproj">
+      <Project>{35d6e863-1b21-4ac7-9633-f3ea945dd109}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

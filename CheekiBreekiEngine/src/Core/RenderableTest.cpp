@@ -1,12 +1,13 @@
-#include "RenderableTest.h"
+#include <Core\RenderableTest.h>
+#include <Graphics\OrthographicCamera.h>
 
 namespace CheekiBreekiEngine {
 	RenderableTest::RenderableTest() {
 
 
-		cam = new PerspectiveCamera(45);
-		cam->setPosition(glm::vec3(0, 0, -5));
+		cam = new OrthographicCamera();
 		transform = new Transform;
+		transform->setPosition(glm::vec3(-5, 5, 0));
 
 		mesh = new Mesh;
 		shader = new Shader;

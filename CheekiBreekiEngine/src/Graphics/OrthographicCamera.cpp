@@ -1,4 +1,4 @@
-#include "OrthographicCamera.h"
+#include <Graphics\OrthographicCamera.h>
 #include <glm\gtx\transform.hpp>
 
 namespace CheekiBreekiEngine {
